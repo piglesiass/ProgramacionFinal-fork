@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Configurar entorno de desarrollo",
+    "description": "Instalar dependencias y configurar variables de entorno locales.",
+    "priority": 1
+  },
+  {
+    "name": "Diseñar esquema de base de datos",
+    "description": "Crear el diagrama entidad-relación para el módulo de usuarios.",
+    "priority": 2
+  },
+  {
+    "name": "Implementar autenticación JWT",
+    "description": "Desarrollar el servicio de login y validación de tokens.",
+    "priority": 1
+  },
+  {
+    "name": "Escribir tests unitarios",
+    "description": "Cobertura de pruebas para la capa de servicios.",
+    "priority": 3
+  },
+  {
+    "name": "Refactorizar controlador de tareas",
+    "description": "Optimizar los endpoints de lectura para mejorar el rendimiento.",
+    "priority": 4
+  },
+  {
+    "name": "Actualizar documentación API",
+    "description": "Documentar los nuevos endpoints en Swagger/OpenAPI.",
+    "priority": 5
+  },
+  {
+    "name": "Corregir bug en el buscador",
+    "description": "Solucionar el problema de paginación al buscar por nombre.",
+    "priority": 1
+  },
+  {
+    "name": "Configurar pipeline CI/CD",
+    "description": "Automatizar el despliegue en el entorno de staging.",
+    "priority": 2
+  },
+  {
+    "name": "Optimizar consultas SQL",
+    "description": "Añadir índices en las tablas de auditoría.",
+    "priority": 3
+  },
+  {
+    "name": "Revisión de código (Code Review)",
+    "description": "Revisar los Pull Requests pendientes del equipo.",
+    "priority": 2
+  }
+]

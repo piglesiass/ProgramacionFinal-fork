@@ -1,0 +1,129 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Arial";
+    -fx-background-color: linear-gradient(to bottom right, #f4f6f9, #e9eef5);
+}
+
+/* =========================
+   LABELS
+========================= */
+
+.label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.label.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2d3d;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.2, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #3b7bd6;
+}
+
+.button:pressed {
+    -fx-background-color: #2f66b3;
+}
+
+/* Botón secundario (si quieres usarlo más adelante) */
+.button.secondary {
+    -fx-background-color: #7f8c8d;
+}
+
+/* =========================
+   TEXTFIELD
+========================= */
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #d0d7de;
+    -fx-padding: 6 10 6 10;
+}
+
+.text-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(gaussian, rgba(74,144,226,0.3), 6, 0.3, 0, 0);
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.slider .track {
+    -fx-background-color: #d0d7de;
+}
+
+.slider .thumb {
+    -fx-background-color: #4a90e2;
+}
+
+/* =========================
+   LISTVIEW
+========================= */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #d0d7de;
+}
+
+.list-cell {
+    -fx-padding: 10;
+    -fx-background-color: transparent;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}
+
+/* =========================
+   VBOX / CONTENEDORES
+========================= */
+
+.vbox {
+    -fx-spacing: 15;
+}
+
+/* =========================
+   GRIDPANE (FORMULARIOS)
+========================= */
+
+.grid-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/* =========================
+   EFECTO "CARD" (opcional)
+   Puedes aplicarlo con styleClass="card"
+========================= */
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 10, 0.2, 0, 4);
+}
