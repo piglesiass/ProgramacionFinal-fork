@@ -19,7 +19,7 @@ public class PokemonManager {
         this.pokemons = pokemons;
     }
 
-    public List<Pokemon> getCreatures() {
+    public List<Pokemon> getPokemons() {
         return this.pokemons;
     }
 }

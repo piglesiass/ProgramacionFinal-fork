@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
+import com.proyecto.model.Pokemon;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -115,8 +117,9 @@ public class SceneManager {
      * <code>SceneManager</code>.
      * 
      * @param sceneID el identificador único de la escena que se desea cargar.
+     * @param elegido 
      */
-    public void loadScene(String sceneID) {
+    public void loadScene(String sceneID, Pokemon elegido) {
         if (scenes.containsKey(sceneID)) {
             // Obtener la pantalla principal
             Screen screen = Screen.getPrimary();
