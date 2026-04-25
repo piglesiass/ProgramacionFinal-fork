@@ -1,6 +1,6 @@
 package com.proyecto.model.skills;
 
-import com.proyecto.model.Creature;
+import com.proyecto.model.Pokemon;
 
 /**
  * @author Pablo
@@ -9,5 +9,5 @@ import com.proyecto.model.Creature;
 public interface Skill {
     String getName();
     String getDescription();
-    String execute(Creature user, Creature target);
+    String execute(Pokemon user, Pokemon target);
 }
