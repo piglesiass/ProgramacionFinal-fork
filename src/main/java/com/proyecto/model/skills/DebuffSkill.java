@@ -2,7 +2,10 @@ package com.proyecto.model.skills;
 
 import com.proyecto.model.Pokemon;
 
-// Baja la defensa del enemigo
+/**
+ * @author Pablo
+ */
+
 public class DebuffSkill implements Skill {
 
     private String name;

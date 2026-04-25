@@ -2,7 +2,10 @@ package com.proyecto.model.skills;
 
 import com.proyecto.model.Pokemon;
 
-// Sube el ataque del usuario
+/**
+ * @author Pablo
+ */
+
 public class BuffSkill implements Skill {
 
     private String name;

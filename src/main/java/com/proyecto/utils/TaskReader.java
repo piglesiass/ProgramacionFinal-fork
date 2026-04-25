@@ -12,7 +12,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.proyecto.App;
 import com.proyecto.model.Task;
-import com.proyecto.model.PokemonDTO;
+import com.proyecto.model.CreatureDTO;
 
 public class TaskReader {
 
@@ -24,11 +24,11 @@ public class TaskReader {
 
         try {
             String json = Files.readString(Path.of(App.class.getResource(taskUrl).toURI()));
-            Type listType = new TypeToken<List<PokemonDTO>>(){}.getType();
+            Type listType = new TypeToken<List<CreatureDTO>>(){}.getType();
 
-            List<PokemonDTO> tasksDTO = gson.fromJson(json, listType);
+            List<CreatureDTO> tasksDTO = gson.fromJson(json, listType);
 
-            for (PokemonDTO t : tasksDTO) {
+            for (CreatureDTO t : tasksDTO) {
                 Task task = new Task(t.name(), t.description(), t.priority());
                 tasks.add(task);
             }

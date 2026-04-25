@@ -2,7 +2,10 @@ package com.proyecto.model.skills;
 
 import com.proyecto.model.Pokemon;
 
-// Cura HP propios
+/**
+ * @author Pablo
+ */
+
 public class CurarSkill implements Skill {
 
     private String name;
