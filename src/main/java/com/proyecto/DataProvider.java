@@ -1,25 +1,25 @@
 package com.proyecto;
 
-import com.proyecto.model.TaskManager;
-import com.proyecto.utils.TaskReader;
+import com.proyecto.model.Pokemon;
+import com.proyecto.model.PokemonManager;
+import com.proyecto.utils.PokemonReader;
 
 public class DataProvider {
     private static DataProvider instance;
 
-    private TaskManager taskManager;
+    private PokemonManager pokemonManager;
 
     private DataProvider(){
-        taskManager = new TaskManager();
-        taskManager.setTasks(TaskReader.readTasks());
+        pokemonManager = new PokemonManager();
+        pokemonManager.setPokemons(PokemonReader.readPokemons());
     }
 
     public static DataProvider getInstance(){
         if (instance==null) instance = new DataProvider();
-
         return instance;
     }
 
-    public TaskManager getTaskManager() {
-        return this.taskManager;
+    public PokemonManager getPokemonManager() {
+        return this.pokemonManager;
     }
 }

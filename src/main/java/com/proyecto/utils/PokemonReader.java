@@ -18,7 +18,7 @@ import com.proyecto.model.PokemonDTO;
  * @author Pablo
  */
 
-public class CreatureReader {
+public class PokemonReader {
 
     private static final String pokemonsUrl = "data/pokemons.json";
 
