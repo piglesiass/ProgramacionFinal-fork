@@ -29,8 +29,27 @@ public class CombatManager {
         return messages;
     }
 
-    public String executeEnemigoAction() {
-        return "";
+public String executeEnemigoAction() {
+        List<Skill> skills = enemigo.getSkills();
+        Skill elegido;
+        double hpRatio = (double) enemigo.getCurrentHp() / enemigo.getMaxHp();
+
+        if (hpRatio < 0.3) {
+            elegido = null;
+            for (Skill s : skills) {
+                if (s.getName().equals("Curacion") || s.getName().equals("Regeneracion")) {
+                    elegido = s;
+                    break;
+                }
+            }
+            if (elegido == null) {
+                elegido = skills.get(random.nextInt(skills.size()));
+            }
+        } else {
+            elegido = skills.get(random.nextInt(skills.size()));
+        }
+
+        return elegido.execute(enemigo, jugador);
     }
 
     public boolean combatePerdido() {
