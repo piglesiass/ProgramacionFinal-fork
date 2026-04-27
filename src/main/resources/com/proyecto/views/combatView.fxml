@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="12.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.controllers.CombatController">
+   <children>
+      <Label text="Combate!" styleClass="title"/>
+
+      <GridPane hgap="20" vgap="8">
+        <columnConstraints>
+          <ColumnConstraints prefWidth="200" />
+          <ColumnConstraints prefWidth="200" />
+        </columnConstraints>
+
+         <children>
+            <Label text="Tu criatura:" GridPane.columnIndex="0" />
+            <Label text="Enemigo:" GridPane.columnIndex="1" />
+
+            <Label fx:id="playerNameLabel" text="..." GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label fx:id="enemyNameLabel" text="..." GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label fx:id="playerHpLabel" text="HP" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label fx:id="enemyHpLabel" text="HP" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <ProgressBar fx:id="playerHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <ProgressBar fx:id="enemyHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+         </children>
+      </GridPane>
+
+      <Separator/>
+
+      <Label text="Elige una habilidad:" />
+      <VBox fx:id="skillsVBox" spacing="6" alignment="CENTER" prefWidth="200"/>
+
+      <Separator/>
+
+      <Label text="Registro:" />
+      <TextArea fx:id="combatLog" editable="false" prefHeight="150" prefWidth="420" wrapText="true"/>
+
+      <Button fx:id="returnBtn" text="Volver al menu" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
