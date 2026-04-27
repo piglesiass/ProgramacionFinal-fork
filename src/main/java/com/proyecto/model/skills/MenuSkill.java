@@ -13,7 +13,7 @@ public class MenuSkill {
             case "Vendaval":          return new CriticoSkill("Vendaval", "Torbellino de viento.", 1.8);
             case "Curacion":          return new CurarSkill("Curacion", "Recupera 30 HP.", 30);
             case "Regeneracion":      return new CurarSkill("Regeneracion", "Recupera 50 HP.", 50);
-            case "Concentracion":     return new CurarSkill("Concentracion", "Sube el ataque 10 puntos.", 10);
+            case "Concentracion":     return new BuffSkill("Concentracion", "Sube el ataque 10 puntos.", 10);
             case "Furia":             return new BuffSkill("Furia", "Sube el ataque 20 puntos.", 20);
             case "Corrosion":         return new DebuffSkill("Corrosion", "Baja la defensa del rival 8 puntos.", 8);
             case "Rugido":            return new DebuffSkill("Rugido", "Baja la defensa del rival 12 puntos.", 12);

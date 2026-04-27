@@ -45,7 +45,7 @@ public class TaskListCell extends ListCell<Task> {
             Task task = getItem();
             if (task != null) {
                 DataProvider.getInstance()
-                        .getTaskManager()
+                        .getPokemonManager()
                         .removeTask(task);
             }
         });

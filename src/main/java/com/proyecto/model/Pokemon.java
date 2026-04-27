@@ -1,5 +1,6 @@
 package com.proyecto.model;
 
+import com.proyecto.model.skills.MenuSkill;
 import com.proyecto.model.skills.Skill;
 
 import javafx.beans.property.IntegerProperty;
@@ -28,7 +29,8 @@ public class Pokemon {
         this.defense = dto.defense();
         this.speed = dto.speed();
         this.skills = new ArrayList<>();
-        
+        for (String s : dto.skills())
+            this.skills.add(MenuSkill.create(s));
     }
 
     public Pokemon(Pokemon pkm) {

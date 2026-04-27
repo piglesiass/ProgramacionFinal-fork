@@ -22,4 +22,9 @@ public class PokemonManager {
     public List<Pokemon> getPokemons() {
         return this.pokemons;
     }
+
+    public void removeTask(Task task) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'removeTask'");
+    }
 }

@@ -145,4 +145,31 @@ public class SceneManager {
             System.err.println("La escena seleccionada no existe");
         }
     }
+
+    @SuppressWarnings("unchecked")
+    public void loadScene(String sceneID, Object data) {
+        if (scenes.containsKey(sceneID)) {
+            Screen screen = Screen.getPrimary();
+            double screenWidth = screen.getBounds().getWidth();
+            double screenHeight = screen.getBounds().getHeight();
+            FXMLLoader fxmlLoader = new FXMLLoader(scenes.get(sceneID));
+            Parent root;
+            try {
+                root = fxmlLoader.load();
+                Object controller = fxmlLoader.getController();
+                if (controller instanceof DataReceiver) {
+                    ((DataReceiver<Object>) controller).receiveData(data);
+                }
+                Scene scene = new Scene(root, screenWidth * screenWidthRatio, screenHeight * screenHeightRatio);
+                if (styles != null) scene.getStylesheets().add(styles.toExternalForm());
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException e) {
+                System.err.println("Error al cargar la vista: " + sceneID);
+                e.printStackTrace();
+            }
+        } else {
+            System.err.println("La escena seleccionada no existe");
+        }
+    }
 }
