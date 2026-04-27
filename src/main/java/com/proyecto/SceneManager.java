@@ -119,7 +119,7 @@ public class SceneManager {
      * @param sceneID el identificador único de la escena que se desea cargar.
      * @param elegido 
      */
-    public void loadScene(String sceneID, Pokemon elegido) {
+    public void loadScene(String sceneID) {
         if (scenes.containsKey(sceneID)) {
             // Obtener la pantalla principal
             Screen screen = Screen.getPrimary();
