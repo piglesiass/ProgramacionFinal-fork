@@ -17,7 +17,7 @@
         </columnConstraints>
 
          <children>
-            <Label text="Tu criatura:" GridPane.columnIndex="0" />
+            <Label text="Tu pokemon:" GridPane.columnIndex="0" />
             <Label text="Enemigo:" GridPane.columnIndex="1" />
 
             <Label fx:id="playerNameLabel" text="..." GridPane.columnIndex="0" GridPane.rowIndex="1"/>

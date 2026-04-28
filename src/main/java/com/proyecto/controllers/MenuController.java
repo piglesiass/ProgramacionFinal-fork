@@ -14,7 +14,7 @@ import java.util.List;
 public class MenuController {
 
     @FXML
-    ComboBox<String> pokemonComboBox;
+    ComboBox<String> creatureComboBox;
 
     @FXML
     Label infoLabel;
@@ -29,10 +29,10 @@ public class MenuController {
         pokemons = DataProvider.getInstance().getPokemonManager().getPokemons();
 
         for (Pokemon p : pokemons) {
-            pokemonComboBox.getItems().add(p.getName());
+            creatureComboBox.getItems().add(p.getName());
         }
 
-        pokemonComboBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldVal, newVal) -> {
+        creatureComboBox.getSelectionModel().selectedIndexProperty().addListener((obs, oldVal, newVal) -> {
             int idx = newVal.intValue();
             if (idx >= 0) {
                 Pokemon p = pokemons.get(idx);
@@ -46,10 +46,10 @@ public class MenuController {
             }
         });
 
-        pokemonComboBox.getSelectionModel().selectFirst();
+        creatureComboBox.getSelectionModel().selectFirst();
 
         startBtn.setOnAction(event -> {
-            int idx = pokemonComboBox.getSelectionModel().getSelectedIndex();
+            int idx = creatureComboBox.getSelectionModel().getSelectedIndex();
             if (idx >= 0) {
                 Pokemon elegido = new Pokemon(pokemons.get(idx));
                 SceneManager.getInstance().loadScene("combat", elegido);
