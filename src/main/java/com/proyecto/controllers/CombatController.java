@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.List;
 import java.util.Random;
@@ -22,10 +24,12 @@ public class CombatController implements DataReceiver<Pokemon> {
     @FXML Label playerNameLabel;
     @FXML Label playerHpLabel;
     @FXML ProgressBar playerHpBar;
+    @FXML ImageView playerImage;
 
     @FXML Label enemyNameLabel;
     @FXML Label enemyHpLabel;
     @FXML ProgressBar enemyHpBar;
+    @FXML ImageView enemyImage;
 
     @FXML VBox skillsVBox;
     @FXML TextArea combatLog;
@@ -51,6 +55,9 @@ public class CombatController implements DataReceiver<Pokemon> {
 
         playerNameLabel.setText(p.getName() + " [" + p.getType() + "]");
         enemyNameLabel.setText(e.getName() + " [" + e.getType() + "]");
+
+        playerImage.setImage(loadImage(p.getName()));
+        enemyImage.setImage(loadImage(e.getName()));
 
         updateHp(p, playerHpLabel, playerHpBar);
         updateHp(e, enemyHpLabel, enemyHpBar);
@@ -98,5 +105,12 @@ public class CombatController implements DataReceiver<Pokemon> {
         label.setText(c.getCurrentHp() + " / " + c.getMaxHp() + " HP");
         double ratio = (double) c.getCurrentHp() / c.getMaxHp();
         bar.setProgress(ratio);
+    }
+
+    private Image loadImage(String name) {
+    String ruta = "/com/proyecto/images/" + name.toLowerCase() + ".png";
+    var url = getClass().getResource(ruta);
+    if (url != null) return new Image(url.toExternalForm());
+    return null;
     }
 }

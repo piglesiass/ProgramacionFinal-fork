@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
 
 <VBox alignment="CENTER" spacing="12.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.controllers.CombatController">
    <children>
@@ -22,11 +23,16 @@
             <Label fx:id="playerNameLabel" text="..." GridPane.columnIndex="0" GridPane.rowIndex="1"/>
             <Label fx:id="enemyNameLabel" text="..." GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-            <Label fx:id="playerHpLabel" text="HP" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-            <Label fx:id="enemyHpLabel" text="HP" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <ImageView fx:id="playerImage" fitWidth="120" fitHeight="120" preserveRatio="true"
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <ImageView fx:id="enemyImage" fitWidth="120" fitHeight="120" preserveRatio="true"
+               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-            <ProgressBar fx:id="playerHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-            <ProgressBar fx:id="enemyHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label fx:id="playerHpLabel" text="HP" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label fx:id="enemyHpLabel" text="HP" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <ProgressBar fx:id="playerHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <ProgressBar fx:id="enemyHpBar" progress="1.0" prefWidth="180" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
          </children>
       </GridPane>
 
