@@ -62,11 +62,9 @@ public class CombatController implements DataReceiver<Pokemon> {
         updateHp(p, playerHpLabel, playerHpBar);
         updateHp(e, enemyHpLabel, enemyHpBar);
 
-        // binding reactivo de HP igual que el profesor hace con priority
         p.currentHpProperty().addListener((obs, oldVal, newVal) -> updateHp(p, playerHpLabel, playerHpBar));
         e.currentHpProperty().addListener((obs, oldVal, newVal) -> updateHp(e, enemyHpLabel, enemyHpBar));
 
-        // crear botones de habilidades dinamicamente (igual que TaskListCell pero mas simple)
         skillsVBox.getChildren().clear();
         for (Skill skill : p.getSkills()) {
             Button btn = new Button(skill.getName());
