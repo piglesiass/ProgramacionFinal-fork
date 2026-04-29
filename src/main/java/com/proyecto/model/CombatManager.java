@@ -39,7 +39,6 @@ public String executeEnemigoAction() {
             for (Skill s : skills) {
                 if (s.getName().equals("Curacion") || s.getName().equals("Regeneracion")) {
                     elegido = s;
-                    break;
                 }
             }
             if (elegido == null) {
