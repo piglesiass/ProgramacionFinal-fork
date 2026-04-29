@@ -1,13 +1,13 @@
 package com.proyecto.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.proyecto.model.skills.MenuSkill;
 import com.proyecto.model.skills.Skill;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Pokemon {
 
@@ -92,5 +92,9 @@ public class Pokemon {
     }
     public List<Skill> getSkills(){
          return skills;
+    }
+
+    public void setCurrentHp(IntegerProperty currentHp) {
+        this.currentHp = currentHp;
     }
 }

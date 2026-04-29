@@ -3,6 +3,7 @@ module com.proyecto {
     requires javafx.fxml;
     requires javafx.graphics;
     requires com.google.gson;
+    requires java.desktop;
 
     opens com.proyecto to javafx.fxml;
     opens com.proyecto.controllers to javafx.fxml;

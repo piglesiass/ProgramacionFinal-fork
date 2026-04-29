@@ -1,5 +1,11 @@
 package com.proyecto.controllers;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
+
 import com.proyecto.DataProvider;
 import com.proyecto.SceneManager;
 import com.proyecto.model.Pokemon;
@@ -8,8 +14,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-
-import java.util.List;
 
 public class MenuController {
 
@@ -21,6 +25,9 @@ public class MenuController {
 
     @FXML
     Button startBtn;
+
+    @FXML
+    Button desktopBtn;
 
     List<Pokemon> pokemons;
 
@@ -53,6 +60,14 @@ public class MenuController {
             if (idx >= 0) {
                 Pokemon elegido = new Pokemon(pokemons.get(idx));
                 SceneManager.getInstance().loadScene("combat", elegido);
+            }
+        });
+
+        desktopBtn.setOnAction(event ->{
+            try {
+                Desktop.getDesktop().browse(new URI("https://github.com/piglesiass/ProgramacionFinal-fork"));
+            } catch (IOException | URISyntaxException e) {
+                e.printStackTrace();
             }
         });
     }

@@ -34,5 +34,14 @@
     "defense": 8,
     "speed": 30,
     "skills": ["Rayo Letal", "Vendaval", "Garra Helada", "Concentracion"]
+  },
+  {
+    "name":"Examen",
+    "type": "Planta",
+    "maxHp": 101,
+    "attack": 50,
+    "defense": 10,
+    "speed": 40,
+    "skills": ["Habilidad nueva", "Rugido", "Golpe Rapido", "Concentracion"]
   }
 ]

@@ -17,6 +17,7 @@ public class MenuSkill {
             case "Furia":             return new BuffSkill("Furia", "Sube el ataque 20 puntos.", 20);
             case "Corrosion":         return new DebuffSkill("Corrosion", "Baja la defensa del rival 8 puntos.", 8);
             case "Rugido":            return new DebuffSkill("Rugido", "Baja la defensa del rival 12 puntos.", 12);
+            case "Habilidad nueva":   return new NewSkill("Habilidad nueva", "El objetivo pierde la mitad de sus puntos vde vida", 12);
             default:                  return new AtaqueSkill(skillName, "Ataque basico.", 1.0);
         }
     }
